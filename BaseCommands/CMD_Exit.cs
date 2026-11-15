@@ -1,5 +1,6 @@
 ﻿using ModuleContracts.Feedback.Error;
 using ModuleContracts.Feedback;
+using ModuleContracts.Operations;
 
 namespace ModuleContracts.Abstractions
 {
@@ -21,7 +22,7 @@ namespace ModuleContracts.Abstractions
         }
 
 
-        public IFeedback? Run(UserInput userInput)
+        public IFeedback? Run(ArgumentOperation userInput)
         {
             if (ParentModule == null) return new NotFound("The sender module is null.");
             if (!ParentModule.IsProgram) return null;

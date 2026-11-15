@@ -1,9 +1,9 @@
-﻿using ModuleContracts.Abstractions;
+﻿using ModuleContracts.Operations;
 
 namespace ModuleContracts.ServiceContracts
 {
     public interface ICommandExecuterContract
     {
-        void ExecuteCommand(UserInput? userInput);
+        void ExecuteCommand(ArgumentOperation? userInput);
     }
 }

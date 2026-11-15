@@ -1,4 +1,5 @@
 ﻿using ModuleContracts.Feedback;
+using ModuleContracts.Operations;
 
 namespace ModuleContracts.Abstractions
 {
@@ -20,7 +21,7 @@ namespace ModuleContracts.Abstractions
         }
 
 
-        public IFeedback? Run(UserInput userInput)
+        public IFeedback? Run(ArgumentOperation userInput)
         {
             ParentModule.BaseCommands.ForEach(command => ParentModule.Contracts.ConsoleViewContract.Message($"{command.Syntax} - {command.Description}"));
 

@@ -1,9 +1,10 @@
 ﻿using ModuleContracts.Abstractions;
+using ModuleContracts.Operations;
 
 namespace ModuleContracts.ServiceContracts
 {
     public interface ICommandParserContract
     {
-        UserInput? Parse(string? rawInput, ModuleBase sender);
+        ArgumentOperation? Parse(string? rawInput, ModuleBase sender);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using ModuleContracts.Feedback.Expected;
 using ModuleContracts.Feedback;
 using ModuleContracts.Feedback.Error;
+using ModuleContracts.Operations;
 
 namespace ModuleContracts.Abstractions
 {
@@ -65,7 +66,7 @@ namespace ModuleContracts.Abstractions
         /// <summary>
         /// The manager of the Module. Calls the core logic and manages Separate Program Module functionality.
         /// </summary>
-        public IFeedback ModuleExecute(UserInput userInput)
+        public IFeedback ModuleExecute(ArgumentOperation userInput)
         {
             if (IsProgram) Entry();
 
@@ -98,7 +99,7 @@ namespace ModuleContracts.Abstractions
         /// The the body of a Module. The Module's entry calls it. 
         /// </summary>
         /// <returns></returns>
-        public abstract IFeedback? ModuleBody(UserInput userInput);
+        public abstract IFeedback? ModuleBody(ArgumentOperation userInput);
 
         private bool TryLoadBaseModuleConfig()
         {

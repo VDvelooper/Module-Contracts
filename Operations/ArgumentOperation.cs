@@ -1,6 +1,8 @@
-﻿namespace ModuleContracts.Abstractions
+﻿using ModuleContracts.Abstractions;
+
+namespace ModuleContracts.Operations
 {
-    public class UserInput
+    public class ArgumentOperation
     {
         public string Raw;
         public ICommand Command;
@@ -30,7 +32,7 @@
             }
         }
         
-        public UserInput(ICommand command, List<string> requiredArgs, int requiredArgsCount, List<string> optionalArgs, int optionalArgsCount, List<ParsedFlag> flags, string raw) 
+        public ArgumentOperation(ICommand command, List<string> requiredArgs, int requiredArgsCount, List<string> optionalArgs, int optionalArgsCount, List<ParsedFlag> flags, string raw) 
         {
             Raw = raw;
             Command = command;

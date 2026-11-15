@@ -1,5 +1,6 @@
 ﻿using ModuleContracts.Feedback.Error;
 using ModuleContracts.Feedback;
+using ModuleContracts.Operations;
 
 namespace ModuleContracts.Abstractions
 {
@@ -24,7 +25,7 @@ namespace ModuleContracts.Abstractions
         /// <summary>
         /// Calls the parent Module's entry point.
         /// </summary>
-        public IFeedback? Run(UserInput userInput)
+        public IFeedback? Run(ArgumentOperation userInput)
         {
             if (userInput.OptionalArgs.Count > 0)
             {
